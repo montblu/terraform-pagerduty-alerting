@@ -34,14 +34,16 @@ variable "pagerduty_vendors" {
   default = ["New Relic", "Prometheus"]
 }
 
-variable "newrelic_resource_name_prefix" {
-  type    = string
-  default = ""
+variable "name_prefix" {
+  type        = string
+  default     = ""
+  description = "Prefix to add to all resource names."
 }
 
-variable "newrelic_resource_name_suffix" {
-  type    = string
-  default = ""
+variable "name_suffix" {
+  type        = string
+  default     = ""
+  description = "Suffix to add to all resource names."
 }
 
 variable "synthetics_monitors" {

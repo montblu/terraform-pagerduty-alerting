@@ -40,7 +40,7 @@ resource "pagerduty_service" "critical" {
     if lookup(value, "critical", false)
   }
 
-  name                    = "${local.nr_entity_prefix}${each.key}${local.nr_entity_suffix}-Critical"
+  name                    = "${local.name_prefix}${each.key}${local.name_suffix}-Critical"
   auto_resolve_timeout    = "null"
   acknowledgement_timeout = 600
   escalation_policy       = data.pagerduty_escalation_policy.ep.id
@@ -71,7 +71,7 @@ resource "pagerduty_service" "non_critical" {
     if lookup(value, "non_critical", false)
   }
 
-  name                    = "${local.nr_entity_prefix}${each.key}${local.nr_entity_suffix}-Non_Critical"
+  name                    = "${local.name_prefix}${each.key}${local.name_suffix}-Non_Critical"
   auto_resolve_timeout    = "null"
   acknowledgement_timeout = 600
   escalation_policy       = data.pagerduty_escalation_policy.ep.id
