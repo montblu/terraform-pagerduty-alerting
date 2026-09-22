@@ -34,8 +34,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
-| <a name="input_newrelic_resource_name_prefix"></a> [newrelic\_resource\_name\_prefix](#input\_newrelic\_resource\_name\_prefix) | n/a | `string` | `""` | no |
-| <a name="input_newrelic_resource_name_suffix"></a> [newrelic\_resource\_name\_suffix](#input\_newrelic\_resource\_name\_suffix) | n/a | `string` | `""` | no |
+| <a name="input_name_prefix"></a> [name\_prefix](#input\_name\_prefix) | Prefix to add to all resource names. | `string` | `""` | no |
+| <a name="input_name_suffix"></a> [name\_suffix](#input\_name\_suffix) | Suffix to add to all resource names. | `string` | `""` | no |
 | <a name="input_pagerduty_escalation_policy"></a> [pagerduty\_escalation\_policy](#input\_pagerduty\_escalation\_policy) | n/a | `string` | `"Default"` | no |
 | <a name="input_pagerduty_services"></a> [pagerduty\_services](#input\_pagerduty\_services) | n/a | <pre>map(object({<br/>    name         = optional(string)<br/>    critical     = optional(bool, false)<br/>    non_critical = optional(bool, false)<br/>    vendor       = optional(string)<br/>    api          = optional(bool, false)<br/>  }))</pre> | <pre>{<br/>  "Alertmanager": {<br/>    "critical": true,<br/>    "non_critical": true,<br/>    "vendor": "Prometheus"<br/>},<br/>  "NewRelic": {<br/>    "critical": true,<br/>    "non_critical": true,<br/>    "vendor": "New Relic"<br/>  },<br/>  "OpenSearch": {<br/>    "api": true,<br/>    "non_critical": true<br/>  }<br/>}</pre> | no |
 | <a name="input_pagerduty_vendors"></a> [pagerduty\_vendors](#input\_pagerduty\_vendors) | n/a | `list(string)` | <pre>[<br/>  "New Relic",<br/>  "Prometheus"<br/>]</pre> | no |
